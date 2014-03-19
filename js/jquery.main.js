@@ -23,6 +23,9 @@
 			$(this).parent().toggleClass('open');
 			return false;
 		});
+		$('ul.sub-menu > li > a').click(function(){
+			$(this).parent().toggleClass('open');			
+		});
 	});
 	
 })(jQuery);

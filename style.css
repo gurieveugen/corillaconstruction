@@ -1277,3 +1277,11 @@ span.wpcf7-form-control-wrap{
 	display:table;
 	clear:both;
 }
+
+ul.sub-menu > li ul.sub-menu{
+	display: none !important;
+}
+
+ul.sub-menu > li.open > ul.sub-menu{
+	display: block  !important;	
+}
