@@ -126,7 +126,8 @@ th.tablet-hide{
 	color: #181818;
 }
 #nav ul a{
-	padding: 1px 0;
+	padding: 5px 0;
+	margin: 0;
 }
 #nav a:hover,
 #nav .active > a,
@@ -134,6 +135,10 @@ th.tablet-hide{
 	/*background: #c51648;*/
 	color: #181818;
 	font-family: 'Raleway Bold', Arial, Helvetica, sans-serif;
+}
+#nav ul a:hover{
+	padding: 5px 0;
+	margin: 0;
 }
 /*#nav .active > a:hover{
 	color: #fff;
@@ -144,6 +149,12 @@ th.tablet-hide{
 #nav ul{
 	display: block;
 	padding: 0 0 0 20px;
+	position: static;
+	background: none;
+	border: none;
+}
+#nav ul ul a:before{
+	content:'- ';
 }
 .home-slider{
 	margin: 0 -30px 20px;

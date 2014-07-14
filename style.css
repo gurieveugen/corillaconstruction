@@ -562,7 +562,7 @@ input, textarea, select{
 }
 #header nav{
 	clear:both;
-	padding:30px 0 35px;
+	padding:30px 0 0;
 }
 #nav{
 	float:right;
@@ -573,50 +573,61 @@ input, textarea, select{
 }
 #nav > li{
 	float:left;
-	margin:0 36px 0 0;
+	margin:0 16px 0 0;
+	position: relative;
 }
 #nav a{
 	color:#58595b;
+	display: block;
+	padding: 10px;
 }
 #nav a:hover{
-	color:#fec325;
 	text-decoration:none;
 	/*font-family: 'Raleway Bold', Arial, Helvetica, sans-serif;*/
 }
-#nav .active > a, #nav ul .menu-item-has-children > a{
-	font-family:'Raleway Bold', Arial, Helvetica, sans-serif;
-	color:#181818;
+#nav li:hover > a{
+	background:#fec325;
 }
-#nav .active > a:hover{
-	color:#fec325;
+#nav .active > a,
+#nav ul .menu-item-has-children > a{
+	font-family:'Raleway Bold', Arial, Helvetica, sans-serif;
 }
 #nav ul{
+	position: absolute;
+	left: 0;
+	top: 40px;
+	min-width: 100%;
 	list-style:none;
 	margin:0;
-	padding:0 0 0 3px;
+	padding:0;
+	border: 1px solid #97978f;
+	background: #fff;
 	font-size:14px;
 	line-height:17px;
-	width:1px;
+	z-index: 100;
 	display:none;
+	-moz-box-sizing:border-box;
+	-webkit-box-sizing:border-box;
+	box-sizing:border-box;
 }
-#nav li.open ul{
-	display:block;
+#nav li:hover > ul{
+	display: block;
+}
+#nav > li > ul{
+	border-top: none;
 }
 #nav ul li{
-	width:200px;
-	padding:13px 0 0;
-}
-#nav ul li:first-child{
-	padding-top:10px;
+	position: relative;
 }
 #nav ul a{
 	color:#181818;
+	margin: -1px;
+	padding: 8px 11px;
+	white-space: nowrap;
 }
 #nav ul ul{
-	padding:0 0 0 22px;
-}
-#nav ul ul a:before{
-	content:'- ';
+	top: 0;
+	left: 100%;
 }
 .slides{
 	list-style: none;
@@ -1276,12 +1287,4 @@ span.wpcf7-form-control-wrap{
 	content:"";
 	display:table;
 	clear:both;
-}
-
-ul.sub-menu > li ul.sub-menu{
-	display: none !important;
-}
-
-ul.sub-menu > li.open > ul.sub-menu{
-	display: block  !important;	
 }

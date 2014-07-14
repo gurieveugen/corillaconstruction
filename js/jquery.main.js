@@ -19,13 +19,16 @@
 		$('.btn-m-nav').click(function(){
 			$('#header nav').toggleClass('open');
 		});
-		$('#nav li.noclick > a').click(function(){
+		
+		$( '#nav li:has(ul)' ).doubleTapToGo();
+		
+		/*$('#nav li.noclick > a').click(function(){
 			$(this).parent().toggleClass('open');
 			return false;
 		});
 		$('ul.sub-menu > li > a').click(function(){
 			$(this).parent().toggleClass('open');			
-		});
+		});*/
 	});
 	
 })(jQuery);
