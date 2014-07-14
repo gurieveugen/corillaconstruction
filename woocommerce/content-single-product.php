@@ -116,7 +116,7 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 	</div>
 	<div class="column left">
 		<div class="summary entry-summary box mobile-hide cf">
-	
+			
 			<?php
 				/**
 				 * woocommerce_single_product_summary hook
@@ -130,10 +130,13 @@ if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 				 */
 				add_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_add_to_cart', 30 );
 				do_action( 'woocommerce_single_product_summary' );
+
 			?>
-
+			
 		</div><!-- .summary -->
-
+		<div class="box box-1 cf">
+			<?php the_content(); ?>
+		</div>
 	</div>
 
 	<?php
